@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="news articles">
+    <meta name="author" content="Adarsh N.B">
+    <title> Welcome to ArticleFeed </title>
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.css">
+    <style>
+        body {
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body ng-app="article">
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <div class="navbar-brand" href="#"> Article Feed </div>
+        </div>
+        <div class="navbar-collapse collapse">
+            <% if (message.length > 0) { %>
+            <div class="alert alert-danger"><%= message %></div>
+            <% } %>
+            <form class="navbar-form navbar-right" method="post" action="/" role="form">
+                <div class="form-group">
+                    <input type="text" placeholder="Email" name="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" placeholder="Password" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-success">Sign in</button>
+            </form>
+        </div><!--/.navbar-collapse -->
+    </div>
+</div>
+
+<div class="jumbotron">
+    <div class="container">
+        <h1>Welcome to Article Feed</h1>
+        <p>This is a site where you can find almost all articles. Have a look and enjoy the knowledge within this site.</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div data-ng-include data-src="'partials/latest-posts'"></div>
+    </div>
+    <div class="col-md-6">
+        <% if (signupMessage.length > 0) { %>
+        <div class="alert alert-danger"><%= signupMessage %></div>
+        <% } %>
+        <div ng-include="'/partials/signup'"></div>
+    </div>
+</div>
+<hr>
+<footer class="container text-center">
+    <p>&copy; 2014 ArticleFeed&trade;</p>
+</footer>
+
+<script type="text/javascript" src="/vendor/angular/angular.min.js"></script>
+<script type="text/javascript" src="/vendor/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="/vendor/angular-resource/angular-resource.min.js"></script>
+<script type="text/javascript" src="/js/app.js"></script>
+</body>
+</html>

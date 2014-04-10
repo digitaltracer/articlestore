@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="news articles">
+    <meta name="author" content="Adarsh N.B">
+    <title> Welcome to ArticleFeed!! </title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/grid.css">
+</head>
+<body ng-app="article">
+<!--<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">-->
+    <div class="container">
+        <!--<div class="navbar-header">
+            <div class="navbar-brand" href="#"> Article Feed </div>
+            <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        </div>-->
+        <div class="page-header text-center">
+            <h1><span class="fa fa-anchor"></span> Welcome <%= user %></h1>
+            <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        </div>
+    </div>
+<!--</div>-->
+
+<div class="jumbotron">
+   <h2>Articles List</h2>
+</div>
+<div class="container" ng-controller="hPosts">
+<div class="row" ng-repeat="post in Posts">
+    <div ng-click="showArticle(post._id)" class="col-10" style="padding-bottom: 5px;padding-left: 10px;padding-top: 2px;">
+        <h2 class="blog-post-title">{{post.headline}}</h2>
+        <p class="blog-post-meta"> {{post.date}}</p>
+    </div>
+</div>
+</div>
+<script type="text/javascript" src="/vendor/angular/angular.min.js"></script>
+<script type="text/javascript" src="/vendor/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="vendor/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="/js/ngSanitize.js"></script>
+<script type="text/javascript" src="/js/ui-bootstrap-tpls-0.10.0.js"></script>
+<script type="text/javascript" src="/js/articleApp.js"></script>
+</body>
+</html>

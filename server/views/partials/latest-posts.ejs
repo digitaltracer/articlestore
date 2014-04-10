@@ -1,0 +1,14 @@
+<div class="panel panel-primary" ng-controller="latestPosts">
+    <div class="panel-heading text-center">Latest Posts</div>
+    <div class="panel-body">
+        <div ng-repeat="post in lPosts" class="row" style="padding-bottom: 8px">
+            <div class="col-md-3">{{post.date | cut:true:10:''}}</div>
+            <div class="col-md-9"><b>{{post.headline}}</b></div>
+        </div>
+       <!-- <div class="row">
+            <div class="col-md-12">
+                Post1
+            </div>
+        </div>-->
+    </div>
+</div>

@@ -1,0 +1,62 @@
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+h4 {
+  margin-top: 25px;
+}
+.row {
+  margin-bottom: 20px;
+}
+.row .row {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+[class*="col-"] {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #eee;
+  background-color: rgba(86,61,124,.15);
+  border: 1px solid #ddd;
+  border: 1px solid rgba(86,61,124,.2);
+}
+
+hr {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.col-10{
+    cursor: pointer;
+}
+
+.left-nav,.right-nav{
+    float:left;
+}
+.right-nav{
+    margin-left:20px;
+}
+a{
+    cursor:pointer;
+}
+
+.modal-header{
+    padding-bottom: 2px;
+}
+
+.modal-header hr{
+    padding:5px 0;
+    margin:0;
+    /*padding-top: 5px;*/
+}
+
+i{
+    margin-bottom: 5px;
+    padding : 5px;
+    cursor: pointer;
+}
+
+.high{
+    background-color: yellow;
+}
