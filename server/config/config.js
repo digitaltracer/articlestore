@@ -10,6 +10,6 @@ module.exports = {
     production: {
         rootPath: rootPath,
         db: 'mongodb://jim:jim@ds027348.mongolab.com:27348/articlestore',
-        port: process.env.PORT || 3030
+        port: process.env.PORT || 80
     }
 }
